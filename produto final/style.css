@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body 
+{
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+header 
+{
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+header .logo img {
+  max-height: 80px;
+  width: auto;
+  margin: 10px; /* Adjust as needed */
+}
+
+#logo-container {
+  position:static; /* Ensures it stays in the corner even when scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1000;   /* Ensures the logo is on top of other content */
+
+}
+
+
+#logo-container img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Styles for the "Back to Top" button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px; /* Adjust distance from bottom */
+  right: 20px;  /* Adjust distance from right */
+  display: none; /* Initially hidden */
+  background-color: #152f45; /* Example background color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8; /* Slightly transparent */
+  z-index: 1001; /* Ensure it's above other elements */
+}
+
+#back-to-top:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+
+/* Responsiveness - Optional adjustments for mobile */
+
+
+.navigation 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  order: 2;
+  margin-top: 10px;
+}
+.navigation li 
+{
+  list-style: none;
+}
+.navigation li a 
+{
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+}
+.navigation li a:hover ,
+.navigation li a.active
+{
+  background: #112434;
+  color: #fff;
+}
+.parallax 
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.parallax img 
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+#text 
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  color: #112434;
+}
+.sec 
+{
+  padding: 100px;
+  background: #112434;
+}
+.sec h2 
+{
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
+.sec p 
+{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;  /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+}
+
+footer {
+  background-color: #112434; /* Example background color */
+  color: #fff; /* Example text color */
+  padding:  100px; /* Add padding top and bottom */
+  text-align: center; /* Center the content */
+  width: 100%;   /* Ensure it spans the full width */
+  position: relative; /* Allow it to be positioned at the bottom */
+  bottom: 0; /* Position it at the very bottom */
+  margin-top: 40px;
+}
+.shared-styles {
+  background-color: #112434;
+  padding: 100px;
+}
+
+.footer-content {
+  max-width: 800px;  /* Optional: Limit the width of the content */
+  margin: 0 auto;  /* Center the content horizontally */
+}
+
+footer a {
+  color: #fff; /* Example link color */
+  text-decoration: none; /* Remove underlines from links */
+}
+
+footer img { /* Style for the Instagram icon if used */
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  vertical-align: middle; /* Align the icon with the text */
+  margin-left: 5px;
+}
+
+.copyright {
+  font-size: 14px; /* Adjust font size as needed */
+  margin-top: 10px; /* Add some space above the copyright */
+}
+
