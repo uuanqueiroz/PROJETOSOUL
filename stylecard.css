@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  margin-bottom: 10px; /* Ajuste conforme necessário */
+  width: 250px; /* Mantenha as dimensões definidas */
+  height: 200px;
+}
+.container {
+  text-align: center; /* Centraliza a imagem */
+}
+
+img[src="logo.png"] {
+display:flex; /* Importante para centralizar corretamente com text-align */
+ margin-bottom: 20px;
+}
+
+
+
+
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-20px); }
+	100% { transform: translateY(0); }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 710px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #efefef;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #e0dede;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+a.zoomed p {
+  -webkit-line-clamp: unset;
+}
+a.zoomed .card-inner {
+  overflow: auto;
+}
+a.opacity-0 {
+  opacity: 0;
+}
+.overflow {
+  overflow: hidden;
+}
+.overflow .background {
+  opacity: 0 !important;
+}
+
+.background {
+  background-color: #dc3c34;
+  border-radius: 10px;  
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-wraper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: space-between;
+}
+a.card {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+.card-main {
+  border: 1px solid #705490;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #4c648c;
+}
+.card:hover .card-main {
+  position:static;
+  z-index: 20;
+}
+.card-inner {
+  position: relative;
+  z-index: 50;
+  height: 100%;
+}
+.card-inner div {
+  height: 50%;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    max-width: 720px;
+    display: block;
+  }
+  .card-wraper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 520px;
+  }
+  .card-wraper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card-main {
+    padding: 30px 20px;
+  }
+  a.card {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+  .card-wraper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .card-main {
+    padding: 40px;
+    position: relative;
+  }
+  a.card {
+    padding: 10px;
+  }
+}
+.card-inner {
+  text-align:justify; /* Centers text horizontally */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers items vertically */
+  height: 100%; /* Ensures the container takes up full height */
+}
+.card.expanded .card-main {
+    /* Existing styles... */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    /* ... other styles */
+}
+
+
+.card-inner > div {  /* Targets the div wrapping the h3 and p */
+   width: auto; /* Allows content to shrink and grow */
+}
+
+
+
+

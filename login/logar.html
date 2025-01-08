@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<img src="icons.png" alt="Soul Ghost" id="soul-ghost">
+		
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form action="#">
+					<h1>Criar Conta</h1>
+					
+					<input type="text" placeholder="Nome" />
+					<input type="email" placeholder="Email" />
+					<input type="password" placeholder="Senha" />
+					<button>Criar Conta</button>
+				</form>
+			</div>
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<h1>Entrar</h1>
+					<input type="email" placeholder="Email" />
+					<input type="password" placeholder="Senha" />
+					<a href="#">Esqueceu a senha?</a>
+					<button>Entrar</button>
+				</form>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<div style="display: flex; align-items: center;"> 
+							
+							<img src="logo.png" alt="Logo" style="height: 100px; width: 100px; margin-right: 50px;">
+							<h1>Vamos iniciar essa jornada!</h1>
+						</div>
+						<p id="informa">
+							Nós da SOULENGLISH estamos felizes por você fazer parte da nossa equipe.
+						</p>
+						<button class="ghost" id="signIn">Entrar</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<div style="display: flex; align-items: center;"> <img src="logo.png" alt="Logo" style="height: 100px; width: 100px; margin-right: px;">
+							<h1>Hello, Friend!</h1>
+						</div>
+						<p>Crie sua conta para darmos inicio a nossa jornada</p>
+						<button class="ghost" id="signUp">Criar Conta</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const signUpButton = document.getElementById('signUp');
+			const signInButton = document.getElementById('signIn');
+			const container = document.getElementById('container');
+
+			signUpButton.addEventListener('click', () => {
+				container.classList.add('right-panel-active');
+			});
+
+			signInButton.addEventListener('click', () => {
+				container.classList.remove('right-panel-active');
+			});
+		</script>
+	</body>
+</html>
